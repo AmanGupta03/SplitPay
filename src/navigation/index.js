@@ -1,6 +1,15 @@
 import React from 'react';
-import {Provider as PaperProvider} from 'react-native-paper';
+import {DefaultTheme, Provider as PaperProvider} from 'react-native-paper';
 import Routes from './Routes';
+
+const theme = {
+  ...DefaultTheme,
+  roundness: 2,
+  colors: {
+    ...DefaultTheme.colors,
+    primary: '#3498db',
+  },
+};
 
 /**
  * Wrap all providers here
@@ -8,7 +17,7 @@ import Routes from './Routes';
 
 export default function Providers() {
   return (
-    <PaperProvider>
+    <PaperProvider theme={theme}>
       <Routes />
     </PaperProvider>
   );

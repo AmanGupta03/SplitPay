@@ -8,6 +8,8 @@ export default function FormButton({title, modeValue, ...rest}) {
   return (
     <Button
       mode={modeValue}
+      icon="plus"
+      uppercase={false}
       {...rest}
       style={styles.button}
       contentStyle={styles.buttonContainer}>
@@ -21,7 +23,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   buttonContainer: {
-    width: width / 2,
-    height: height / 15,
+    width: width / 1.5,
+    height: height / 20,
   },
 });
